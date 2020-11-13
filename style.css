@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.input_user, textarea {
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.gender_user, #input_checkbox {
+    display: inline;
+}
+
+#label_address {
+    display: block;
+}
+
+textarea {
+    display: block;
+    resize: none;
+}
+
+.button {
+    display: inline;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+#reset_button {
+    background-color: #f71919;
+    margin-right: 20px;
+}
+
+#submit_button {
+    background-color: #48f50f;
+}
+
+#reset_button:hover {
+    background-color:#d30e0e;
+}
+
+#submit_button:hover {
+    background-color: #3fd40e;
+}
+
+.show_password_button {
+    display: grid;
+    width: 125px;
+    justify-content: start;
+    align-content: center;
+    grid-gap: 5px;
+    grid-template-areas: 
+        'eye_icon text_show_password'; 
+    cursor: pointer;
+}
+
+.show_password_button p {
+    border: none;
+    grid-area: text_show_password;
+    margin: 0;
+}
+
+.show_password_button img {
+    grid-area: eye_icon;
+}

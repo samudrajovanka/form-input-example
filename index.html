@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Form Registrasi</legend>
+
+            <label for="input_name">Nama</label>
+            <input type="text" id="input_name" placeholder="Masukan Nama" class="input_user">
+
+            <label for="input_username">Username</label>
+            <input type="text" id="input_username" placeholder="Masukan Username" class="input_user">
+
+            <label for="input_email">Email</label>
+            <input type="email" id="input_email" placeholder="Masukan Email" class="input_user">
+
+            <label for="input_password">Password</label>
+            <input type="password" id="input_password" placeholder="Masukan Password" class="input_user">
+
+            <div class="show_password_button" onclick="showPassword()">
+                <img src="view.png" alt="button show password" width="20" id="show_password_icon">
+                <p>Lihat Password</p>
+            </div>
+
+            <p>Jenis Kelamin</p>
+            <input type="radio" id="radio_male" value="Laki-Laki" name="gender" class="gender_user">
+            <label for="radio_male">Laki-Laki</label>
+
+            <input type="radio" id="radio_female" value="Perempuan" name="gender" class="gender_user">
+            <label for="radio_female">Perempuan</label>
+
+            <label for="input_address" id="label_address">Alamat</label>
+            <textarea name="" id="input_address" cols="30" rows="10" placeholder="Masukan Alamat"></textarea>
+
+            <input type="checkbox" id="input_checkbox">
+            <label for="input_checkbox">Ikuti semua peraturan</label>
+
+            <div>
+                <input type="reset" value="Ulang" class="button" id="reset_button">
+                <input type="submit" value="Kirim" class="button" id="submit_button">
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        let show = false;
+        function showPassword() {
+            if (show) {
+                document.querySelector("#input_password").type = "password"
+                document.querySelector("#show_password_icon").src = "view.png"
+                show = false
+            } else {
+                document.querySelector("#input_password").type = "text"
+                document.querySelector("#show_password_icon").src = "private.png"
+                show = true
+            }
+        }
+    </script>
+</body>
+</html>
